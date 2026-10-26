@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Toko Toki - Flatshoes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Yellowtail&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="tokotoki.css">
+</head>
+<body>
+
+  <!-- MENU -->
+  <nav class="nav">
+    <a href="#beranda" class="pil scroll">Beranda</a>
+    <a href="#katalog" class="pil scroll">Katalog</a>
+    <a href="#pesan" class="pil scroll">Pesan</a>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero" id="beranda">
+    <svg class="bintang" viewBox="0 0 100 100" aria-hidden="true">
+      <polygon points="50,2 58,36 90,18 66,44 98,50 66,56 90,82 58,64 50,98 42,64 10,82 34,56 2,50 34,44 10,18 42,36"
+               fill="#D9E3F7" stroke="#6F85B8" stroke-width="2.5" stroke-linejoin="round"/>
+    </svg>
+    <div class="hero-isi">
+      <p class="script">Toko Toki</p>
+      <h1 class="judul">FLATSHOES</h1>
+      <p class="sub">Flatshoes nyaman untuk kuliah, kerja, dan jalan santai</p>
+      <a href="#katalog" class="tombol scroll">Lihat Katalog</a>
+    </div>
+  </header>
+  <div class="scallop"></div>
+
+  <!-- PENGANTAR -->
+  <section class="intro">
+    <h2>FLATSHOES NYAMAN SEPANJANG HARI</h2>
+    <p class="sub-biru">sepatu ringan untuk langkah kecil dan besar</p>
+    <p>Kami menjual flatshoes dengan sol empuk dan bahan yang ringan, mulai dari model polos sampai yang berpita. Tersedia ukuran 36 sampai 41. Pilih modelnya di katalog, lalu isi form pesanan di bawah.</p>
+    <div class="aksi">
+      <a href="#pesan" class="tombol tombol-koral scroll">Pesan Sekarang</a>
+      <button type="button" class="tombol" id="tombol-info">Info Pengiriman</button>
+    </div>
+    <div id="info-kirim">
+      <p>Pesanan dikirim 1-2 hari kerja setelah pembayaran diterima. Ubah teks ini sesuai kebijakan tokomu.</p>
+    </div>
+  </section>
+
+  <!-- KATALOG (TAB) -->
+  <section class="katalog" id="katalog">
+    <h2>Katalog</h2>
+    <p class="sub-biru">pilih kategori, lalu tekan Pesan pada model yang kamu suka</p>
+
+    <div class="tabs" role="tablist">
+      <button type="button" class="tab-btn aktif" data-tab="tab-casual" role="tab">Casual</button>
+      <button type="button" class="tab-btn" data-tab="tab-formal" role="tab">Formal</button>
+      <button type="button" class="tab-btn" data-tab="tab-pesta" role="tab">Pesta</button>
+    </div>
+
+    <!-- CARA ISI FOTO:
+         Ganti  <div class="foto"></div>
+         menjadi <div class="foto"><img src="img/nama-foto.jpg" alt="Nama produk"></div>
+         Untuk produk baru, salin satu blok <article class="kartu">...</article>. -->
+      <div class="tab-panel" id="tab-casual" role="tabpanel">
+        <div class="grid">
+        <article class="kartu">
+          <div class="foto"><img src="sepatu1.jpeg" alt="Claire Shoes"></div>
+          <h3>Claire Shoes</h3>
+          <p class="harga">Rp 180.000</p>
+          <button type="button" class="tombol tombol-kecil btn-pesan" data-nama="Claire Shoes">Pesan</button>
+        </article>
+        <article class="kartu">
+          <div class="foto"><img src="sepatu2.png" alt="Repetto Shoes"></div>
+          <h3>Repetto Shoes</h3>
+          <p class="harga">Rp 200.000</p>
+          <button type="button" class="tombol tombol-kecil btn-pesan" data-nama="Repetto Shoes">Pesan</button>
+        </article>
+        <article class="kartu">
+          <div class="foto"><img src="sepatu3.png" alt="Florere Shoes"></div>
+          <h3>Florere Shoes</h3>
+          <p class="harga">Rp 200.000</p>
+          <button type="button" class="tombol tombol-kecil btn-pesan" data-nama="Florere Shoes">Pesan</button>
+        </article>
+        </div>
+      </div>
+
+      <div class="tab-panel" id="tab-formal" role="tabpanel">
+        <div class="grid">
+        <article class="kartu">
+          <div class="foto"><img src="sepatu7.jpeg" alt="Roland Shoes"></div>
+          <h3>Roland Shoes</h3>
+          <p class="harga">Rp 165.000</p>
+          <button type="button" class="tombol tombol-kecil btn-pesan" data-nama="Roland Shoes">Pesan</button>
+        </article>
+        <article class="kartu">
+          <div class="foto"><img src="sepatu8.png" alt="Lova Shoes"></div>
+          <h3>Lova Shoes</h3>
+          <p class="harga">Rp 155.000</p>
+          <button type="button" class="tombol tombol-kecil btn-pesan" data-nama="Lova Shoes">Pesan</button>
+        </article>
+        <article class="kartu">
+          <div class="foto"><img src="sepatu9.png" alt="Lucy Shoes"></div>
+          <h3>Lucy Shoes</h3>
+          <p class="harga">Rp 200.000</p>
+          <button type="button" class="tombol tombol-kecil btn-pesan" data-nama="Lucy Shoes">Pesan</button>
+        </article>
+        </div>
+      </div>
+
+      <div class="tab-panel" id="tab-pesta" role="tabpanel">
+        <div class="grid">
+        <article class="kartu">
+           <div class="foto"><img src="sepatu6.jpeg" alt="Garret Shoes"></div>
+          <h3>Garret Shoes</h3>
+          <p class="harga">Rp 240.000</p>
+          <button type="button" class="tombol tombol-kecil btn-pesan" data-nama="Garret Shoes">Pesan</button>
+        </article>
+        <article class="kartu">
+          <div class="foto"><img src="sepatu5.jpeg" alt="Mona Shoes"></div>
+          <h3>Mona Shoes</h3>
+          <p class="harga">Rp 145.000</p>
+          <button type="button" class="tombol tombol-kecil btn-pesan" data-nama="Mona Shoes">Pesan</button>
+        </article>
+        <article class="kartu">
+            <div class="foto"><img src="sepatu4.png" alt="Vivian Shoes"></div>
+          <h3>Vivian Shoes</h3>
+          <p class="harga">Rp 175.000</p>
+          <button type="button" class="tombol tombol-kecil btn-pesan" data-nama="Vivian Shoes">Pesan</button>
+        </article>
+        </div>
+      </div>
+
+  </section>
+
+  <!-- FORM PEMESANAN -->
+  <section class="pesan" id="pesan">
+    <div class="form-box">
+      <h2>Pesan Sekarang</h2>
+      <p class="sub-biru">isi data di bawah, kami hubungi lewat WhatsApp</p>
+
+      <form id="form-pesan" novalidate>
+        <div class="baris">
+          <div>
+            <label for="nama">Nama lengkap</label>
+            <input type="text" id="nama" name="nama" placeholder="Contoh: Andini Salsabilla">
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="nama@email.com">
+          </div>
+          <div>
+            <label for="telepon">No. WhatsApp</label>
+            <input type="tel" id="telepon" name="telepon" placeholder="08123456789">
+          </div>
+          <div>
+            <label for="model">Model yang dipesan</label>
+            <input type="text" id="model" name="model" placeholder="Pilih dari katalog atau ketik nama model">
+          </div>
+          <div>
+            <label for="ukuran">Ukuran</label>
+            <select id="ukuran" name="ukuran">
+              <option value="">Pilih ukuran</option>
+              <option>36</option><option>37</option><option>38</option>
+              <option>39</option><option>40</option><option>41</option>
+            </select>
+          </div>
+          <div>
+            <label for="jumlah">Jumlah pasang</label>
+            <input type="number" id="jumlah" name="jumlah" value="1">
+          </div>
+          <div class="penuh">
+            <label for="alamat">Alamat pengiriman</label>
+            <textarea id="alamat" name="alamat" rows="3" placeholder="Jalan, nomor rumah, kota, kode pos"></textarea>
+          </div>
+          <div class="penuh">
+            <span class="label">Metode pembayaran</span>
+            <div class="grup">
+              <label class="pilihan"><input type="radio" name="bayar" value="transfer"> Transfer bank</label>
+              <label class="pilihan"><input type="radio" name="bayar" value="ewallet"> E-wallet</label>
+              <label class="pilihan"><input type="radio" name="bayar" value="cod"> Bayar di tempat</label>
+            </div>
+          </div>
+          <div class="penuh">
+            <div class="grup">
+              <label class="pilihan"><input type="checkbox" name="setuju" value="ya"> Data yang saya isi sudah benar</label>
+            </div>
+          </div>
+        </div>
+        <button type="submit" class="tombol tombol-koral">Kirim Pesanan</button>
+      </form>
+
+      <div id="sukses">
+        <h3>Pesanan terkirim!</h3>
+        <p>Terima kasih. Kami akan menghubungi kamu lewat WhatsApp untuk konfirmasi.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2026 Toko Toki - Flatshoes</p>
+  </footer>
+
+  <!-- jQuery & jQuery Validation (butuh internet) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+  <script src="tokotoki.js"></script>
+</body>
+</html>
