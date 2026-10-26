@@ -1,0 +1,235 @@
+/* ====== Warna & dasar ====== */
+:root {
+  --kuning: #FFD23F;
+  --kuning-muda: #FFE57F;
+  --krem: #FFF4B8;
+  --krem-terang: #FFFBE0;
+  --biru: #6F85B8;
+  --biru-tua: #3F5694;
+  --biru-muda: #D9E3F7;
+  --koral: #EF7A66;
+  --koral-tua: #C4513D;
+  --koral-muda: #FFD3C9;
+  --galat: #C4382A;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: var(--krem);
+  color: #34406A;
+  line-height: 1.6;
+}
+
+h1, h2, h3 { font-family: 'Playfair Display', serif; font-weight: 400; }
+
+:focus-visible { outline: 3px solid var(--biru-tua); outline-offset: 3px; }
+
+/* ====== Menu ====== */
+.nav {
+  background: var(--biru);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 18px;
+}
+.pil {
+  background: var(--biru-muda);
+  color: var(--biru-tua);
+  text-decoration: none;
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  padding: 7px 38px;
+  border-radius: 999px;
+}
+.pil:hover { background: #fff; }
+
+/* ====== Hero bergaris + tepi bergelombang ====== */
+.hero {
+  position: relative;
+  text-align: center;
+  padding: 90px 20px 50px;
+  background: repeating-linear-gradient(90deg, var(--kuning) 0 40px, var(--kuning-muda) 40px 80px);
+}
+.bintang {
+  position: absolute;
+  top: 40px;
+  right: 6%;
+  width: 110px;
+}
+.script {
+  font-family: 'Yellowtail', cursive;
+  font-size: 2.6rem;
+  color: var(--koral);
+  line-height: 1;
+  margin-bottom: -6px;
+}
+.judul {
+  font-size: clamp(3rem, 12vw, 7rem);
+  letter-spacing: .03em;
+  line-height: 1.05;
+  color: var(--koral);
+}
+.sub {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: clamp(1.1rem, 3vw, 1.7rem);
+  color: var(--koral);
+  margin: 12px 0 30px;
+}
+.scallop {
+  height: 50px;
+  background:
+    radial-gradient(circle at 25px 0, var(--kuning) 24px, transparent 25px) 0 20px / 50px 30px repeat-x,
+    linear-gradient(var(--kuning), var(--kuning)) 0 0 / 100% 20px no-repeat;
+}
+
+/* ====== Tombol ====== */
+.tombol {
+  display: inline-block;
+  font: inherit;
+  font-size: .8rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-decoration: none;
+  cursor: pointer;
+  color: var(--biru-tua);
+  background: var(--biru-muda);
+  border: 2px solid var(--biru);
+  border-radius: 999px;
+  padding: 10px 40px;
+}
+.tombol:hover { background: #fff; }
+.tombol-koral { color: var(--koral-tua); background: var(--koral-muda); border-color: var(--koral); }
+.tombol-koral:hover { background: #fff; }
+.tombol-kecil { padding: 6px 28px; }
+
+/* ====== Pengantar ====== */
+.intro {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 30px 20px 70px;
+  text-align: center;
+}
+.intro h2, .katalog h2, .form-box h2 {
+  color: var(--biru);
+  font-size: clamp(1.8rem, 5vw, 2.8rem);
+  font-weight: 700;
+}
+.sub-biru {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 1.3rem;
+  color: var(--biru);
+  margin-bottom: 18px;
+}
+.intro p { font-size: .9rem; }
+.aksi { margin-top: 28px; display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+#info-kirim {
+  display: none;
+  margin: 22px auto 0;
+  max-width: 520px;
+  background: var(--krem-terang);
+  border: 2px dashed var(--biru);
+  border-radius: 14px;
+  padding: 14px 18px;
+}
+
+/* ====== Katalog + tab ====== */
+.katalog { padding: 20px 20px 80px; text-align: center; }
+.tabs { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; margin: 22px 0 30px; }
+.tab-btn {
+  font: inherit;
+  font-size: .8rem;
+  font-weight: 700;
+  cursor: pointer;
+  color: var(--biru-tua);
+  background: transparent;
+  border: 2px solid var(--biru);
+  border-radius: 999px;
+  padding: 8px 28px;
+}
+.tab-btn.aktif { background: var(--biru); color: #fff; }
+
+.grid {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+}
+.kartu {
+  background: var(--krem-terang);
+  border: 2px solid var(--kuning);
+  border-radius: 20px;
+  padding: 14px 14px 20px;
+}
+.foto {
+  aspect-ratio: 1 / 1;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background: #fff;
+  border: 2px solid var(--kuning);
+  border-radius: 14px;
+  margin-bottom: 12px;
+}
+/* foto masih kosong: tampil sebagai kotak penanda */
+.foto:empty {
+  background: var(--biru-muda);
+  border: 2px dashed var(--biru);
+}
+.foto:empty::before { content: 'Foto produk'; color: var(--biru-tua); font-size: .85rem; }
+.foto img { width: 100%; height: 100%; object-fit: contain; display: block; }
+.kartu h3 { font-size: 1.2rem; color: var(--biru-tua); }
+.harga { font-weight: 700; color: var(--koral-tua); margin-bottom: 12px; }
+
+/* ====== Form ====== */
+.pesan { background: var(--kuning-muda); padding: 70px 20px; }
+.form-box {
+  max-width: 760px;
+  margin: 0 auto;
+  background: var(--krem-terang);
+  border: 2px solid var(--kuning);
+  border-radius: 24px;
+  padding: 36px 30px;
+  text-align: center;
+}
+form { text-align: left; }
+.baris { display: grid; grid-template-columns: 1fr 1fr; gap: 16px 20px; margin-bottom: 24px; }
+.penuh { grid-column: 1 / -1; }
+label, .label { display: block; font-size: .8rem; font-weight: 700; margin-bottom: 4px; }
+input[type="text"], input[type="email"], input[type="tel"], input[type="number"], select, textarea {
+  width: 100%;
+  font: inherit;
+  font-size: .9rem;
+  color: #34406A;
+  background: #fff;
+  border: 2px solid var(--biru);
+  border-radius: 12px;
+  padding: 9px 12px;
+}
+.grup { display: flex; flex-wrap: wrap; gap: 6px 22px; }
+.pilihan { font-weight: 500; margin: 0; }
+.pilihan input { margin-right: 6px; accent-color: var(--biru-tua); }
+form .tombol { display: block; margin: 0 auto; }
+
+/* pesan error jQuery Validation */
+small.error { display: block; color: var(--galat); font-size: .75rem; margin-top: 3px; width: 100%; }
+input.error, select.error, textarea.error { border-color: var(--galat); }
+
+#sukses { display: none; padding: 20px 0; }
+#sukses h3 { font-size: 1.8rem; color: var(--koral-tua); }
+
+/* ====== Footer ====== */
+.footer { text-align: center; font-size: .8rem; padding: 24px; background: var(--biru); color: #fff; }
+
+/* ====== Layar kecil ====== */
+@media (max-width: 600px) {
+  .baris { grid-template-columns: 1fr; }
+  .bintang { width: 60px; top: 20px; }
+  .form-box { padding: 28px 18px; }
+}
