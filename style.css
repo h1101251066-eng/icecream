@@ -118,7 +118,7 @@ body {
     color: var(--teks-pudar);
 }
 
-/* Pesan "tidak ditemukan" disembunyikan dulu*/
+/*Pesan "tidak ditemukan" disembunyikan dulu*/
 .pesan-kosong {
     display: none;
     color: var(--teks-pudar);

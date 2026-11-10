@@ -11,7 +11,7 @@ tombolTema.addEventListener("click", function () {
         tombolTema.textContent = "Mode gelap";
     }
 });
-// ===== 2. Pencarian proyek===== 
+// =====2. Pencarian proyek===== 
 const kotakCari = document.getElementById("cari");
 const semuaKartu = document.querySelectorAll(".kartu");
 const pesanKosong = document.getElementById("pesan-kosong");

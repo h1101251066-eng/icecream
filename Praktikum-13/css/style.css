@@ -1,0 +1,193 @@
+:root {
+  --krem: #f8f1e3;        
+  --krem-gelap: #efe8d8;  
+  --hitam: #111111;       
+  --kuning: #f5d94e;
+  --pink: #f4a6d0;        
+  --pink-tua: #d9488f;    
+  --olive: #a9bc6b;
+  --biru: #a9b9ee;
+  --lebar-sidebar: 230px;
+  --tinggi-navbar: 68px;
+}
+
+html { scroll-behavior: smooth; } 
+
+body {
+  font-family: 'Instrument Sans', system-ui, sans-serif;
+  background-color: var(--krem);
+  color: var(--hitam);
+  padding-top: var(--tinggi-navbar); 
+}
+
+.navbar-boba {
+  background-color: var(--krem);
+  height: var(--tinggi-navbar);
+}
+
+.navbar-boba .navbar-brand {
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: var(--hitam);
+}
+
+.cari-pil {
+  max-width: 460px;
+  background: #fff;
+  border: 1px solid var(--hitam);
+  border-radius: 50rem;
+  padding: 4px;
+  align-items: center;
+}
+.cari-pil .cari-ikon {
+  width: 34px; height: 34px;
+  border-radius: 50%;
+  background: var(--pink);
+  display: flex; align-items: center; justify-content: center;
+}
+.cari-pil .form-control { border: 0; box-shadow: none; background: transparent; }
+
+.btn-bulat {
+  width: 42px; height: 42px;
+  border-radius: 50%;
+  border: 1px solid var(--hitam);
+  background: transparent;
+  color: var(--hitam);
+  display: flex; align-items: center; justify-content: center;
+}
+.btn-bulat:hover { background: var(--hitam); color: #fff; }
+
+.dropdown-menu { border-radius: 16px; border: 1px solid var(--hitam); }
+
+.sidebar { background-color: var(--hitam); color: #fff; }
+
+@media (min-width: 992px) {
+  .sidebar {
+    position: fixed;
+    top: var(--tinggi-navbar);
+    bottom: 16px;
+    left: 16px;
+    width: var(--lebar-sidebar);
+    border-radius: 28px;
+    overflow-y: auto;
+  }
+
+  .konten { margin-left: calc(var(--lebar-sidebar) + 32px); }
+}
+
+.sidebar .offcanvas-lg {
+  --bs-offcanvas-bg: var(--hitam);
+  --bs-offcanvas-color: #fff;
+}
+
+.sidebar .nav-link {
+  color: rgba(255, 255, 255, 0.75);
+  border-radius: 50rem;
+  padding: 0.6rem 1rem;
+  margin-bottom: 2px;
+  display: flex; align-items: center; gap: 0.7rem;
+}
+.sidebar .nav-link:hover { color: #fff; background: rgba(255, 255, 255, 0.1); }
+.sidebar .nav-link.active { color: var(--pink); font-weight: 600; }
+
+.sidebar .judul-menu {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.5);
+  padding: 0.8rem 1rem 0.3rem;
+}
+
+.kartu-stat {
+  position: relative;
+  overflow: hidden;
+  border: 0;
+  border-radius: 28px;
+  color: var(--hitam);
+}
+.kartu-stat.kuning { background: var(--kuning); }
+.kartu-stat.pink   { background: var(--pink); }
+.kartu-stat.olive  { background: var(--olive); }
+.kartu-stat.biru   { background: var(--biru); }
+
+.kartu-stat .card-body { position: relative; z-index: 1; }
+
+.kartu-stat::after {
+  content: "";
+  position: absolute;
+  right: -12px; top: -12px;
+  width: 92px; height: 92px;
+  background: rgba(0, 0, 0, 0.13);
+}
+.kartu-stat.kuning::after {
+  clip-path: polygon(35% 0, 65% 0, 65% 35%, 100% 35%, 100% 65%, 65% 65%, 65% 100%, 35% 100%, 35% 65%, 0 65%, 0 35%, 35% 35%);
+  transform: rotate(20deg);
+}
+.kartu-stat.pink::after  { border-radius: 50%; }
+.kartu-stat.olive::after { clip-path: polygon(50% 100%, 0 0, 100% 0); }
+.kartu-stat.biru::after {
+  clip-path: polygon(50% 0, 61% 20%, 85% 15%, 80% 39%, 100% 50%, 80% 61%, 85% 85%, 61% 80%, 50% 100%, 39% 80%, 15% 85%, 20% 61%, 0 50%, 20% 39%, 15% 15%, 39% 20%);
+}
+
+.kartu-stat .ikon {
+  width: 48px; height: 48px;
+  border-radius: 50%;
+  background: var(--hitam);
+  color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+.kartu-stat .angka { font-size: 1.7rem; font-weight: 700; line-height: 1.1; }
+.kartu-stat .text-secondary { color: rgba(0, 0, 0, 0.65) !important; }
+
+.kartu-tabel {
+  background: var(--krem-gelap);
+  border: 0;
+  border-radius: 28px;
+}
+
+.kartu-tabel .table { --bs-table-bg: transparent; --bs-table-hover-bg: rgba(0, 0, 0, 0.05); }
+.kartu-tabel .table thead th {
+  background: transparent;
+  color: var(--hitam);
+  font-weight: 600;
+  white-space: nowrap;
+  border-bottom: 1px solid var(--hitam);
+}
+.kartu-tabel .table tbody td { border-bottom: 1px solid rgba(0, 0, 0, 0.08); }
+
+.badge { border-radius: 50rem; font-weight: 600; padding: 0.45em 0.8em; }
+.badge.text-bg-success { background-color: #cfe08f !important; color: var(--hitam) !important; }
+.badge.text-bg-warning { background-color: var(--kuning) !important; color: var(--hitam) !important; }
+.badge.text-bg-danger  { background-color: var(--pink) !important; color: var(--hitam) !important; }
+
+.icon-brand { color: var(--pink-tua); }
+
+.modal-content { background: var(--krem); border: 1px solid var(--hitam); border-radius: 28px; overflow: hidden; }
+.modal-header { background: var(--hitam); color: #fff; border: 0; }
+
+.halaman {
+  margin-bottom: 2.5rem;
+  scroll-margin-top: calc(var(--tinggi-navbar) + 16px);
+}
+
+#hal-pengaturan { min-height: calc(100vh - var(--tinggi-navbar) - 2rem); }
+
+.judul-halaman { font-size: 2rem; }
+
+.progress { height: 12px; border-radius: 50rem; background: #e2dac7; }
+.progress-bar { background-color: var(--hitam); }
+.progress-bar.bg-danger { background-color: var(--pink-tua) !important; }
+
+.btn-pink { background: var(--hitam); color: #fff; border: 0; }
+.btn-pink:hover { background: var(--pink-tua); color: #fff; }
+
+.form-control { border-radius: 50rem; border: 1px solid var(--hitam); background: #fff; }
+
+@media (max-width: 575.98px) {
+  .kartu-stat .angka { font-size: 1.4rem; }
+  .judul-halaman { font-size: 1.5rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
